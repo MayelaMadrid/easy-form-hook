@@ -1,10 +1,10 @@
 {
-  "name": "easy-form-hook",
+  "name": "@MayelaMadrid/easy-form-hook",
   "version": "1.0.0",
   "description": "",
   "author": "Mayela-Madrid",
   "license": "MIT",
-  "repository": "Mayela-Madrid/easy-form-hook",
+  "repository": "MayelaMadrid/easy-form-hook",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
