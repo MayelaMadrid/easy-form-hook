@@ -1,0 +1,26 @@
+name: 'release'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    name: release
+    runs-on: ubuntu-latest
+    steps:
+      - name: ACTIONS_ALLOW_UNSECURE_COMMANDS
+        id: ACTIONS_ALLOW_UNSECURE_COMMANDS
+        run: echo 'ACTIONS_ALLOW_UNSECURE_COMMANDS=true' >> $GITHUB_ENV
+      - name: checkout
+        uses: actions/checkout@v2.1.1
+      - name: node
+        uses: actions/setup-node@v1.4.2
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org
+      - name: publish
+        run: npm install && npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
