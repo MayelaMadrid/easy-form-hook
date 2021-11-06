@@ -103,7 +103,6 @@ const useForm = ({ initialValues, validation }) => {
     handleKeyPress,
     handleBlur,
     handleFocus,
-    isThereAnError,
     values,
     errors,
   };
